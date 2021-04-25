@@ -1,0 +1,169 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Mark</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css2/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="#" method="POST">
+		{%csrf_token%}
+		<h1 style="color:#FFFFFF">Articles Published in National & International Journals</h1>
+	<div class="table-styl">
+		<table class="table table-striped table-dark table-responsive-lg">
+			<thead>
+                  <tr>
+             <th scope="col">S.No.</th>
+					  <th scope="col">Title</th>
+					  <th scope="col">Year</th>
+					  <th scope="col">Journal & ISBN , ISSN</th>
+					  <th scope="col">International/National</th>
+					  </tr>
+				</thead>
+				<tbody>
+                <tr>
+            <th scope="row">1</th>
+                  <td><input type="text" name="t1" for={{form.t1}} </td>
+     <td><input type="text" name="y1" for={{form.y1}} </td>
+      <td><input type="text" name="j1" for={{form.j1}} </td>
+      <td><input type="text" name="n1" for={{form.n1}} </td>
+              </tr>
+ <tr>
+   <th scope="row">2</th>
+                  <td><input type="text" name="t2" for={{form.t2}} </td>
+     <td><input type="text" name="y2" for={{form.y2}} </td>
+      <td><input type="text" name="j2" for={{form.j2}} </td>
+      <td><input type="text" name="n2" for={{form.n2}} </td>
+              </tr>
+ <tr>
+   <th scope="row">3</th>
+                  <td><input type="text" name="t3" for={{form.t3}} </td>
+     <td><input type="text" name="y3" for={{form.y3}} </td>
+      <td><input type="text" name="j3" for={{form.j3}} </td>
+      <td><input type="text" name="n3" for={{form.n3}} </td>
+              </tr>
+ <tr>
+   <th scope="row">4</th>
+                  <td><input type="text" name="t4" for={{form.t4}} </td>
+     <td><input type="text" name="y4" for={{form.y4}} </td>
+      <td><input type="text" name="j4" for={{form.j4}} </td>
+      <td><input type="text" name="n4" for={{form.n4}} </td>
+              </tr>
+ <tr>
+   <th scope="row">5</th>
+                  <td><input type="text" name="t5" for={{form.t5}} </td>
+     <td><input type="text" name="y5" for={{form.y5}} </td>
+      <td><input type="text" name="j5" for={{form.j5}} </td>
+      <td><input type="text" name="n5" for={{form.n5}} </td>
+              </tr>
+ <tr>
+   <th scope="row">6</th>
+                  <td><input type="text" name="t6" for={{form.t6}} </td>
+     <td><input type="text" name="y6" for={{form.y6}} </td>
+      <td><input type="text" name="j6" for={{form.j6}} </td>
+      <td><input type="text" name="n6" for={{form.n6}} </td>
+              </tr>
+ <tr>
+   <th scope="row">7</th>
+                  <td><input type="text" name="t7" for={{form.t7}} </td>
+     <td><input type="text" name="y7" for={{form.y7}} </td>
+      <td><input type="text" name="j7" for={{form.j7}} </td>
+      <td><input type="text" name="n7" for={{form.n7}} </td>
+              </tr>
+ <tr>
+   <th scope="row">8</th>
+                  <td><input type="text" name="t8" for={{form.t8}} </td>
+     <td><input type="text" name="y8" for={{form.y8}} </td>
+      <td><input type="text" name="j8" for={{form.j8}} </td>
+      <td><input type="text" name="n8" for={{form.n8}} </td>
+              </tr>
+ <tr>
+   <th scope="row">9</th>
+                  <td><input type="text" name="t9" for={{form.t9}} </td>
+     <td><input type="text" name="y9" for={{form.y9}} </td>
+      <td><input type="text" name="j9" for={{form.j9}} </td>
+      <td><input type="text" name="n9" for={{form.n9}} </td>
+              </tr>
+ <tr>
+   <th scope="row">10</th>
+                  <td><input type="text" name="t10" for={{form.t10}} </td>
+     <td><input type="text" name="y10" for={{form.y10}} </td>
+      <td><input type="text" name="j10" for={{form.j10}} </td>
+      <td><input type="text" name="n10" for={{form.n10}} </td>
+              </tr>
+ <tr>
+   <th scope="row">11</th>
+                  <td><input type="text" name="t11" for={{form.t11}} </td>
+     <td><input type="text" name="y11" for={{form.y11}} </td>
+      <td><input type="text" name="j11" for={{form.j11}} </td>
+      <td><input type="text" name="n11" for={{form.n11}} </td>
+              </tr>
+ <tr>
+   <th scope="row">12</th>
+                  <td><input type="text" name="t12" for={{form.t12}} </td>
+     <td><input type="text" name="y12" for={{form.y12}} </td>
+      <td><input type="text" name="j12" for={{form.j12}} </td>
+      <td><input type="text" name="n12" for={{form.n12}} </td>
+              </tr>
+ <tr>
+   <th scope="row">13</th>
+                  <td><input type="text" name="t13" for={{form.t13}} </td>
+     <td><input type="text" name="y13" for={{form.y13}} </td>
+      <td><input type="text" name="j13" for={{form.j13}} </td>
+      <td><input type="text" name="n13" for={{form.n13}} </td>
+              </tr>
+ <tr>
+   <th scope="row">14</th>
+                  <td><input type="text" name="t14" for={{form.t14}} </td>
+     <td><input type="text" name="y14" for={{form.y14}} </td>
+      <td><input type="text" name="j14" for={{form.j14}} </td>
+      <td><input type="text" name="n14" for={{form.n14}} </td>
+              </tr>
+ <tr>
+   <th scope="row">15</th>
+                  <td><input type="text" name="t15" for={{form.t15}} </td>
+     <td><input type="text" name="y15" for={{form.y15}} </td>
+      <td><input type="text" name="j15" for={{form.j15}} </td>
+      <td><input type="text" name="n15" for={{form.n15}} </td>
+              </tr>
+</tbody>
+ </table>
+</div>
+
+ <div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Update" onclick="myFunction()">
+		</div>
+</form>
+</div>
+ <script>
+             function myFunction() {
+                     alert("Updated Successfully");
+}
+</script>
+</body>
+</html>
+

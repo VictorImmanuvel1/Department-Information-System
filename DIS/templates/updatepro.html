@@ -1,0 +1,225 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{%static 'css3/bootstrap3.css'%}">
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form method="POST">
+	{%csrf_token%}
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Roll Number</label>
+			<div class="amc-div">
+				<i class="fa fa-address-book" aria-hidden="true"></i>
+				<input type="text" name="roll_no"  for={{form.roll_no}}
+			</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Name</label>
+				<div class="amc-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="name" for={{form.name}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Mobile Number</label>
+				<div class="amc-div">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					<input type="text" name="ph_no" for={{form.ph_no}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Email</label>
+			<div class="amc-div">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input type="text" name="email" for={{form.email}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Gender</label>
+				<div class="amc-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+				        <input type="text" name="gender" for={{form.gender}}
+					<!---728x90--->
+
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">DOB</label>
+				<div class="amc-div">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<input type="text" class="date" id="datepicker" name="dob" for={{form.dob}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Father Name</label>
+				<div class="amc-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="father_name" for={{form.father_name}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Father Number</label>
+				<div class="amc-div">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					<input type="text" name="father_no" for={{form.father_no}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Religion</label>
+				<div class="amc-div">
+					<i class="fa fa-users" aria-hidden="true"></i>
+					<input type="text" name="religion" for={{form.religion}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Caste</label>
+				<div class="amc-div">
+					<i class="fa fa-users" aria-hidden="true"></i>
+					<input type="text" name="caste" for={{form.caste}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="amc-right-grid1">
+			<div class="amc-grid1">
+				<label class="text">Martial Status</label>
+				<div class="amc-div">
+					<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+					<input type="text" name="status" for={{form.status}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Mother Tongue</label>
+				<div class="amc-div">
+					<i class="fa fa-language" aria-hidden="true"></i>
+					<input type="text" name="mtongue" for={{form.mtongue}}
+					<!---728x90--->
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
+		<div class="amc-right-grid1">
+			<div class="amc-grid1">
+				<label class="text">Blood Group</label>
+				<div class="amc-div">
+					<i class="fa fa-heartbeat" aria-hidden="true"></i>
+					<input type="text" name="bgroup" for={{form.bgroup}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Nationality</label>
+				<div class="amc-div">
+					<i class="fa fa-map" aria-hidden="true"></i>
+					<input type="text" name="nation" for={{form.nation}}
+					<!---728x90--->
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="amc-right-grid1">
+		<div class="amc-grid1">
+			<label class="text">Hostel/Dayscholar<span>?</span></label>
+				<div class="amc-div">
+				<i class="fa fa-building" aria-hidden="true"></i>
+					<input type="text" for={{form.hostel}}
+
+				</div>
+		</div>
+			<label class="text">Management/Government Quota</label>
+			<div class="amc-grid2">
+				<div class="amc-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" for={{form.morg}}
+
+				</div>
+			</div>
+		</div>
+
+		<div class="amc-right-grid1">
+			<div class="amc-grid1">
+				<label class="text">Sports Person<span>?</span></label>
+					<div class="amc-div">
+					<i class="fa fa-bicycle" aria-hidden="true"></i>
+						<input type="text" for={{form.sports}}
+
+					</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Percentage of Last Studies</label>
+				<div class="amc-div">
+					<i class="fa fa-book" aria-hidden="true"></i>
+					<input type="text" name="lmark" for={{form.lmark}}
+					<!---728x90--->
+				</div>
+
+			</div>
+			<br>
+			<br>
+		<div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Register" onclick="myFunction()">
+		</div>
+</form>
+</div>
+
+<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script>
+				 function myFunction() {
+								 alert("Updated Successfully");
+}
+</script>
+<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+
+</html>

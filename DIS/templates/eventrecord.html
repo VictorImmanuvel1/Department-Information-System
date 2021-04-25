@@ -1,0 +1,98 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Record</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.cs'%}'">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form amcs-form-res">
+<form method="POST">
+	{%csrf_token%}
+		<h1 style="color:#FFFFFF">EVENT RECORDS</h1>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Title</label>
+				<div class="amc-div">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					<input type="text" name="title" placeholder="Title" required=""/>
+				</div>
+			</div>
+
+			<div class="amc-grid2">
+				<label class="text">Date</label>
+				<div class="amc-div">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<input type="text" name="date" placeholder="Date" required=""/>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div class="form-outline">
+					<label class="text">Description</label><br><br>
+					<textarea class="des-box" name="description" rows="5" cols="93"> </textarea>
+			  </div><br>
+
+			<div class="amc-last-grid1">
+				<div class="amc-grid1">
+					<label class="text">Host</label>
+				<div class="amc-div ">
+					<i class="fa fa-address-book" aria-hidden="true"></i>
+					<input type="text" name="host" placeholder="Host" required=""/>
+				</div>
+				</div>
+				<div class="amc-grid2">
+					<label class="text">Level</label>
+					<div class="amc-div">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<input type="text" name="level" placeholder="Level" required=""/>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		<div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Register" onclick="myFunction()">
+		</div>
+</form>
+</div>
+
+<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script>
+				 function myFunction() {
+								 alert("Saved Successfully");
+}
+</script>
+<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+
+</html>

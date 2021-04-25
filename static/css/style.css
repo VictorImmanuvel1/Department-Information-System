@@ -1,0 +1,101 @@
+.header
+{
+position: absolute;
+width: 100%;
+height: 12%;
+background:#0000007c;
+}
+
+/* ----- LOGOS ----- */
+.logo
+{
+position: absolute;
+left: 10%;
+}
+.logo img{
+padding-top: 4px;
+width: 75px;
+}
+.headerCont{
+text-align: center;
+margin-top: 12px;
+font-size: 36px ;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.admin-home-logout{
+    float: right;
+    margin-top: 25px;
+    margin-right: 10%;
+}
+
+.logout-btn{
+    background-color:#17a2b8;
+    color: white;
+}
+.logout-btn:hover{
+    background-color:transparent;
+    color: white;
+}
+
+/* Home */
+
+.boxHome{
+    padding-top: 7%;
+}
+
+.boxPart{
+	background: rgba(171, 171, 171, 0.34);
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.textHome{
+    margin:20px 0px;
+}
+
+.fa{
+     color:#FFFFFF;
+     font-size: 50px;
+     padding-bottom: 10px;
+}
+
+.btnAll-outline-info{
+	color: #4283d7;
+}
+
+.titleHome {
+	padding-bottom:20px;
+}
+
+.row button{
+    color: #FFFFFF;
+    border-color :#5d32d1;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .headerCont{
+        padding-top: 80px;
+        font-size: 26px;
+        margin-left: -1px;
+    }
+    .logo{
+         position: absolute;
+        left:40%;
+    }
+    .row{
+    padding-top: 50px;
+    }
+    .header{
+        height: 25%;
+    }  
+    .boxHome{
+        padding-top: 30%;
+    }
+    .logo img {
+    margin-left: -130%;
+}
+
+}

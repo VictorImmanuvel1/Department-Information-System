@@ -1,0 +1,169 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Mark</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css2/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="#" method="POST">
+		{%csrf_token%}
+		<h1 style="color:#FFFFFF"> UPDATE MARK</h1>
+	<div class="table-styl">
+		<table class="table table-striped table-dark table-responsive-lg">
+			<thead>
+			  <tr>
+				<th scope="col">S.No.</th>
+				<th scope="col">Subj.Code</th>
+				<th scope="col">Subj.Name</th>
+				<th scope="col">T1</th>
+				<th scope="col">Q1</th>
+				<th scope="col">A1</th>
+				<th scope="col">T2</th>
+				<th scope="col">Q2</th>
+				<th scope="col">A2</th>
+				<th scope="col">Total</th>
+				<th scope="col">External</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<th scope="row">1</th>
+				<td><input type="text" name="SC1" for={{form5.SC1}}</td>
+            <td><input type="text" name="SN1" for={{form5.SN1}}</td>
+            <td><input type="text" name="T11" for={{form5.T11}}</td>
+            <td><input type="text" name="Q11" for={{form5.Q11}}</td>
+            <td><input type="text" name="A11" for={{form5.A11}}</td>
+            <td><input type="text" name="T21" for={{form5.T21}}</td>
+            <td><input type="text" name="Q21" for={{form5.Q21}}</td>
+            <td><input type="text" name="A21" for={{form5.A21}}</td>
+            <td><input type="text" name="TO1" for={{form5.TO1}}</td>
+            <td><input type="text" name="E1" for={{form5.E1}}</td>
+			  </tr>
+			  <tr>
+				<th scope="row">2</th>
+				<td><input type="text" name="SC2" for={{form5.SC2}}</td>
+            <td><input type="text" name="SN2" for={{form5.SN2}}</td>
+            <td><input type="text" name="T12" for={{form5.T12}}</td>
+            <td><input type="text" name="Q12" for={{form5.Q12}}</td>
+            <td><input type="text" name="A12" for={{form5.A12}}</td>
+            <td><input type="text" name="T22" for={{form5.T22}}</td>
+            <td><input type="text" name="Q22" for={{form5.Q22}}</td>
+            <td><input type="text" name="A22" for={{form5.A22}}</td>
+            <td><input type="text" name="TO2" for={{form5.TO2}}</td>
+            <td><input type="text" name="E2" for={{form5.E2}}</td>
+			  </tr>
+			  <tr>
+				<th scope="row">3</th>
+				<td><input type="text" name="SC3" for={{form5.SC3}}</td>
+            <td><input type="text" name="SN3" for={{form5.SN3}}</td>
+            <td><input type="text" name="T13" for={{form5.T13}}</td>
+            <td><input type="text" name="Q13" for={{form5.Q13}}</td>
+            <td><input type="text" name="A13" for={{form5.A13}}</td>
+            <td><input type="text" name="T23" for={{form5.T23}}</td>
+            <td><input type="text" name="Q23" for={{form5.Q23}}</td>
+            <td><input type="text" name="A23" for={{form5.A23}}</td>
+            <td><input type="text" name="TO3" for={{form5.TO3}}</td>
+            <td><input type="text" name="E3" for={{form5.E3}}</td>
+			  </tr>
+			  <th scope="row">4</th>
+				<td><input type="text" name="SC4" for={{form5.SC4}}</td>
+            <td><input type="text" name="SN4" for={{form5.SN4}}</td>
+            <td><input type="text" name="T14" for={{form5.T14}}</td>
+            <td><input type="text" name="Q14" for={{form5.Q14}}</td>
+            <td><input type="text" name="A14" for={{form5.A14}}</td>
+            <td><input type="text" name="T24" for={{form5.T24}}</td>
+            <td><input type="text" name="Q24" for={{form5.Q24}}</td>
+            <td><input type="text" name="A24" for={{form5.A24}}</td>
+            <td><input type="text" name="TO4" for={{form5.TO4}}</td>
+            <td><input type="text" name="E4" for={{form5.E4}}</td>
+			  </tr>
+			  <th scope="row">5</th>
+				<td><input type="text" name="SC5" for={{form5.SC5}}</td>
+            <td><input type="text" name="SN5" for={{form5.SN5}}</td>
+            <td><input type="text" name="T15" for={{form5.T15}}</td>
+            <td><input type="text" name="Q15" for={{form5.Q15}}</td>
+            <td><input type="text" name="A15" for={{form5.A15}}</td>
+            <td><input type="text" name="T25" for={{form5.T25}}</td>
+            <td><input type="text" name="Q25" for={{form5.Q25}}</td>
+            <td><input type="text" name="A25" for={{form5.A25}}</td>
+            <td><input type="text" name="TO5" for={{form5.TO5}}</td>
+            <td><input type="text" name="E5" for={{form5.E5}}</td>
+				  </tr>
+			  <th scope="row">6</th>
+				<td><input type="text" name="SC6" for={{form5.SC6}}</td>
+            <td><input type="text" name="SN6" for={{form5.SN6}}</td>
+            <td><input type="text" name="T16" for={{form5.T16}}</td>
+            <td><input type="text" name="Q16" for={{form5.Q16}}</td>
+            <td><input type="text" name="A16" for={{form5.A16}}</td>
+            <td><input type="text" name="T26" for={{form5.T26}}</td>
+            <td><input type="text" name="Q26" for={{form5.Q26}}</td>
+            <td><input type="text" name="A26" for={{form5.A26}}</td>
+            <td><input type="text" name="TO6" for={{form5.TO6}}</td>
+            <td><input type="text" name="E6" for={{form5.E6}}</td>
+			  </tr>
+			  <th scope="row">7</th>
+				<td><input type="text" name="SC7" for={{form5.SC7}}</td>
+            <td><input type="text" name="SN7" for={{form5.SN7}}</td>
+            <td><input type="text" name="T17" for={{form5.T17}}</td>
+            <td><input type="text" name="Q17" for={{form5.Q17}}</td>
+            <td><input type="text" name="A17" for={{form5.A17}}</td>
+            <td><input type="text" name="T27" for={{form5.T27}}</td>
+            <td><input type="text" name="Q27" for={{form5.Q27}}</td>
+            <td><input type="text" name="A27" for={{form5.A27}}</td>
+            <td><input type="text" name="TO7" for={{form5.TO7}}</td>
+            <td><input type="text" name="E7" for={{form5.E7}}</td>
+			  </tr>
+			</tbody>
+		  </table>
+	</div>
+
+
+		<div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Update" onclick="myFunction()">
+		</div>
+</form>
+</div>
+ <script>
+             function myFunction() {
+                     alert("Updated Successfully");
+}
+</script>
+
+<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+
+</html>
+

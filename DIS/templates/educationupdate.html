@@ -1,0 +1,112 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Mark</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css2/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="#" method="POST">
+		{%csrf_token%}
+		<h1 style="color:#FFFFFF"> Educational Qualification</h1>
+	<div class="table-styl">
+		<table class="table table-striped table-dark table-responsive-lg">
+			<thead>
+
+                  <tr>
+                      <th scope="col">Degree</th>
+					  <th scope="col">Subject</th>
+					  <th scope="col">College / University& Place</th>
+					  <th scope="col">Year Completed</th>
+					  </tr>
+				</thead>
+				<tbody>
+                <tr>
+                  <td><input type="text" name="d1" for={{form.d1}} </td>
+     <td><input type="text" name="s1" for={{form.s1}} </td>
+     <td><input type="text" name="c1" for={{form.c1}} </td>
+                  <td><input type="text" name="y1" for={{form.y1}} </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="d2" for={{form.d2}} </td>
+     <td><input type="text" name="s2" for={{form.s2}} </td>
+     <td><input type="text" name="c2" for={{form.c2}} </td>
+                  <td><input type="text" name="y2" for={{form.y2}} </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="d3" for={{form.d3}} </td>
+     <td><input type="text" name="s3" for={{form.s3}} </td>
+     <td><input type="text" name="c3" for={{form.c3}} </td>
+                  <td><input type="text" name="y3" for={{form.y3}} </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="d4" for={{form.d4}} </td>
+     <td><input type="text" name="s4" for={{form.s4}} </td>
+     <td><input type="text" name="c4" for={{form.c4}} </td>
+                  <td><input type="text" name="y4" for={{form.y4}} </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="d5" for={{form.d5}} </td>
+     <td><input type="text" name="s5" for={{form.s5}} </td>
+     <td><input type="text" name="c5" for={{form.c5}} </td>
+                  <td><input type="text" name="y5" for={{form.y5}} </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="d6" for={{form.d6}} </td>
+     <td><input type="text" name="s6" for={{form.s6}} </td>
+     <td><input type="text" name="c6" for={{form.c6}} </td>
+                  <td><input type="text" name="y6" for={{form.y6}} </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="d7" for={{form.d7}} </td>
+     <td><input type="text" name="s7" for={{form.s7}} </td>
+     <td><input type="text" name="c7" for={{form.c7}} </td>
+                  <td><input type="text" name="y7" for={{form.y7}} </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="d8" for={{form.d8}} </td>
+     <td><input type="text" name="s8" for={{form.s8}} </td>
+     <td><input type="text" name="c8" for={{form.c8}} </td>
+                  <td><input type="text" name="y8" for={{form.y8}} </td>
+              </tr>
+              </tbody>
+ </table>
+</div>
+    <div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Update" onclick="myFunction()">
+		</div>
+</form>
+</div>
+ <script>
+             function myFunction() {
+                     alert("Updated Successfully");
+}
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,50 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'style/style2.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'style/bootstrap.css'%}">
+    <script src="{%static 'style/bootstrap.bundle.min'%}"></script>
+</head>
+<body>
+   <section>
+    <div class="header">
+      <div class="logo">
+        <a href="index.html"><img src="{% static 'images/logo2.png'%}"></a>
+      </div>
+
+      <div class="headerCont">
+        <b>DEPARTMENT INFORMATION SYSTEM</b>
+      </div>
+    </div>
+   </section>
+
+   <section class="loginContainer">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+
+                  <form method="POST" class="box" action="">
+                      {% csrf_token %}
+                      <h1>Login</h1>
+
+
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="password" name="password" placeholder="Password">
+                        <a class="forgot text-muted" href= "{%url 'reset_password' %}">Forgot password?</a>
+                        <input type="submit" name="" value="Login" href="#">
+                  </form>
+               {% for message in messages %}
+                <p class="message">{{message}}</p>
+				            {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+   </section>
+
+
+</body>
+</html>

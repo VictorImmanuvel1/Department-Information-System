@@ -1,0 +1,99 @@
+.header
+{
+position: absolute;
+width: 100%;
+background:#0000007c;
+padding-bottom:20px;
+}
+
+/* ----- LOGOS ----- */
+.logo
+{
+position: absolute;
+left: 10%;
+}
+.logo img{
+padding-top: 4px;
+width: 60px;
+}
+.headerCont{
+text-align: center;
+margin-top: 12px;
+font-size: 36px;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Home */
+
+.boxHome{
+    padding-top: 7%;
+}
+
+.boxPart{
+	background: rgba(171, 171, 171, 0.34);
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.textHome{
+    margin:20px 0px;
+}
+
+.fa{
+     color:#5d32d1;
+     font-size: 50px;
+     padding-bottom: 10px;
+}
+
+.btnAll-outline-info{
+	color: #4283d7;
+}
+
+.titleHome {
+	padding-bottom:20px;
+}
+
+.row button{
+    color: #5d32d1;
+    border-color :#5d32d1;
+}
+
+
+/*@media only screen and (min-width: 768px) {
+
+    .headerCont{
+        padding-top: 50px;
+        font-size: 26px;
+    }
+    .logo{
+         position: absolute;
+        left:40%;
+    }
+    .header{
+        height: 20%;
+    }
+    .boxHome{
+        padding-top: 30%;
+    }
+
+
+
+}*/
+
+@media only screen and (min-width: 600px) {
+  .boxPart{
+      padding:30% 10px;
+  }
+  .titleHome h4{
+    font-size: 50px;
+  }
+  .fa {
+    font-size: 80px;
+  }
+  .btn{font-size: 40px;
+        border: 2px solid transparent;
+        padding: 10px 30px;
+  }
+
+
+}

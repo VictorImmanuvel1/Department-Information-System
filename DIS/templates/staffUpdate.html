@@ -1,0 +1,281 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Staff Update</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{%static 'css3/bootstrap3.css'%}">
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form method="POST">
+	{%csrf_token%}
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Username</label>
+			<div class="amc-div">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="username" placeholder="Username" for={{u_form.username}}
+			</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Email</label>
+			<div class="amc-div">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input type="text" name="email" placeholder="Mail id" for={{u_form.email}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+
+<label class="text">Name</label>
+<div class="amc-div">
+   <i class="fa fa-user" aria-hidden="true"></i>
+   <input type="text" name="name" placeholder="Name" for={{p_form.name}}
+
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Confirm Email</label>
+			<div class="amc-div">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input type="text" name="email" placeholder="Mail id" for={{p_form.email}}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Department</label>
+				<div class="amc-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="department" placeholder="Department" for={{p_form.department}}
+
+					<!---728x90--->
+
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Designation</label>
+<div class="amc-div">
+   <i class="fa fa-address-book" aria-hidden="true"></i>
+   <input type="text" name="designation" placeholder="Designation" for={{p_form.designation}}
+
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Date of Joining</label>
+<div class="amc-div">
+   <i class="fa fa-calendar" aria-hidden="true"></i>
+   <input type="text" name="doj" placeholder="Date of Joining" for={{p_form.doj}}
+</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Specialization in Teaching</label>
+<div class="amc-div">
+   <i class="fa fa-user" aria-hidden="true"></i>
+   <input type="text" name="spint" placeholder="Specialization in Teaching" for={{p_form.spint}}
+</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+    <div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Specialization in Research</label>
+<div class="amc-div">
+   <i class="fa fa-university" aria-hidden="true"></i>
+   <input type="text" name="spinre" placeholder="Specialization in Research" for={{p_form.spinre}}
+</div>
+			</div>
+<div class="amc-grid2">
+				<label class="text">Research Interest</label>
+<div class="amc-div">
+   <i class="fa fa-university" aria-hidden="true"></i>
+   <input type="text" name="reint" placeholder="Research Interest" for={{p_form.reint}}
+
+</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+			<br>
+			<br>
+		<div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Update" onclick="myFunction()">
+		</div>
+</form>
+</div>
+
+<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script>
+				 function myFunction() {
+								 alert("Updated Successfully");
+}
+</script>
+
+<!-- //Calendar -->
+
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    username:<input type="text" name="username" for={{u_form.username}} <br><br>
+    Email:<input  type="text" name="email" for={{u_form.email}} <br><br>
+    Name:<input  type="text" name="name" for={{p_form.name}} <br><br>
+    Designation:<input  type="text" name="designation" for={{p_form.designation}} <br><br>
+    Department:<input  type="text" name="department" for={{p_form.department}} <br><br>
+    Date of Joining:<input  type="text" name="doj" for={{p_form.doj}} <br><br>
+    Educational Qualification:
+    <table>
+    <tr>
+        <th>Degree</th>
+        <th>Subject</th>
+        <th>College/University & Place</th>
+        <th>Year Completed</th>
+    </tr>
+    <tr>
+        <td><input type=“text” name=“d1“ for={{e_form.d1}}</td>
+        <td><input type=“text” name=“s1“ for={{e_form.s1}}</td>
+        <td><input type=“text” name=“c1“ for={{e_form.c1}}</td>
+        <td><input type=“text” name=“y1“ for={{e_form.y1}}</td>
+    </tr>
+    <tr>
+    <td><input type=“text” name=“d2“ for={{e_form.d2}}</td>
+    <td><input type=“text” name=“s2“ for={{e_form.s2}}</td>
+    <td><input type=“text” name=“c2“ for={{e_form.c2}}</td>
+    <td><input type=“text” name=“y2“ for={{e_form.y2}}</td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d3“ for={{e_form.d3}}</td>
+    <td><input type=“text” name=“s3“ for={{e_form.s3}}</td>
+    <td><input type=“text” name=“c3“ for={{e_form.c3}}</td>
+    <td><input type=“text” name=“y3“ for={{e_form.y3}}</td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d4“ for={{e_form.d4}}</td>
+    <td><input type=“text” name=“s4“ for={{e_form.s4}}</td>
+    <td><input type=“text” name=“c4“ for={{e_form.c4}}</td>
+    <td><input type=“text” name=“y4“ for={{e_form.y4}}</td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d5“ for={{e_form.d5}}</td>
+    <td><input type=“text” name=“s5“ for={{e_form.s5}}</td>
+    <td><input type=“text” name=“c5“ for={{e_form.c5}}</td>
+    <td><input type=“text” name=“y5“ for={{e_form.y5}}</td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d6“ for={{e_form.d6}}</td>
+    <td><input type=“text” name=“s6“ for={{e_form.s6}}</td>
+    <td><input type=“text” name=“c6“ for={{e_form.c6}}</td>
+    <td><input type=“text” name=“y6“ for={{e_form.y6}}</td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d7“ for={{e_form.d7}}</td>
+    <td><input type=“text” name=“s7“ for={{e_form.s7}}</td>
+    <td><input type=“text” name=“c7“ for={{e_form.c7}}</td>
+    <td><input type=“text” name=“y7“ for={{e_form.y7}}</td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d8“ for={{e_form.d8}}</td>
+    <td><input type=“text” name=“s8“ for={{e_form.s8}}</td>
+    <td><input type=“text” name=“c8“ for={{e_form.c8}}</td>
+    <td><input type=“text” name=“y8“ for={{e_form.y8}}</td>
+</tr>
+</table>
+    Specialization in Teaching:<section id="textarea" contenteditable="true" name="spint" for={{p_form.spint}}
+<ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+</ul>
+
+</section><br><br>
+    Specialization in Research:<input  type="text" name="spinre" for={{p_form.spinre}}<br><br>
+    Research Interest:<input  type="text" name="reint" for={{p_form.reint}}<br><br>
+    Other Work Experience:<section id="textarea" contenteditable="true" name="oe" for={{p_form.oe}}
+<ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+</ul>
+
+</section><br><br><
+    Administrative and Academic Positions:<section id="textarea" contenteditable="true" name="ae" for={{p_form.ae}}
+<ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+</ul>
+
+</section><br><br>
+    Articles and Paper Published:<section id="textarea" contenteditable="true" name="app" for={{p_form.app}}
+<ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+</ul>
+
+</section><br><br>
+    Conferences,Seminars and Workshops:<section id="textarea" contenteditable="true" name="csw" for={{p_form.csw}}
+<ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+</ul>
+
+</section><br><br>
+    Other Activities:<section id="textarea" contenteditable="true" name="oa" for={{p_form.oa}}
+<ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+</ul>
+
+</section><br><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

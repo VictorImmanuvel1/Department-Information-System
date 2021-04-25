@@ -1,0 +1,698 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Viewpage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="#" method="POST">
+	{%csrf_token%}
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Name</label>
+				<div class="amc-divSd">
+						{{user.profile.name}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Email</label>
+			<div class="amc-divSd">
+					{{user.email}}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Designation</label>
+				<div class="amc-divSd">
+						{{user.profile.designation}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Department</label>
+			<div class="amc-divSd">
+					{{user.profile.department}}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Date of Joining</label>
+				<div class="amc-divSd">
+						{{user.profile.doj}}
+					<!---728x90--->
+
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Specialization in Teaching</label>
+				<div class="amc-divSd">
+				 {{user.profile.spint}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Specialization in Research</label>
+				<div class="amc-divSd">
+						{{user.profile.spinre}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Research Interest</label>
+				<div class="amc-divSd">
+						{{user.profile.reint}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+    <div class="clear"></div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'staffupdate' %}';">Update info</button>
+				</div><br>
+    <label class="text">Educational Qualification:</label>
+			<div class="table-styl">
+			<table class="table table-striped table-dark table-responsive-lg hideRowContainingZeroValue">
+				<thead>
+				  <tr>
+                      <th scope="col">Degree</th>
+					  <th scope="col">Subject</th>
+					  <th scope="col">College / University& Place</th>
+					  <th scope="col">Year Completed</th>
+					  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+                      <td><input type="text" name="d1" value={{user.education.d1}} </td>
+					  <td><input type="text" name="s1" value={{user.education.s1}} </td>
+					  <td><input type="text" name="c1" value={{user.education.c1}} </td>
+                      <td><input type="text" name="y1" value={{user.education.y1}} </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="d2" value={{user.education.d2}} </td>
+					  <td><input type="text" name="s2" value={{user.education.s2}} </td>
+					  <td><input type="text" name="c2" value={{user.education.c2}} </td>
+                      <td><input type="text" name="y2" value={{user.education.y2}} </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="d3" value={{user.education.d3}} </td>
+					  <td><input type="text" name="s3" value={{user.education.s3}} </td>
+					  <td><input type="text" name="c3" value={{user.education.c3}} </td>
+                      <td><input type="text" name="y3" value={{user.education.y3}} </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="d4" value={{user.education.d4}} </td>
+					  <td><input type="text" name="s4" value={{user.education.s4}} </td>
+					  <td><input type="text" name="c4" value={{user.education.c4}} </td>
+                      <td><input type="text" name="y4" value={{user.education.y4}} </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="d5" value={{user.education.d5}} </td>
+					  <td><input type="text" name="s5" value={{user.education.s5}} </td>
+					  <td><input type="text" name="c5" value={{user.education.c5}} </td>
+                      <td><input type="text" name="y5" value={{user.education.y5}} </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="d6" value={{user.education.d6}} </td>
+					  <td><input type="text" name="s6" value={{user.education.s6}} </td>
+					  <td><input type="text" name="c6" value={{user.education.c6}} </td>
+                      <td><input type="text" name="y6" value={{user.education.y6}} </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="d7" value={{user.education.d7}} </td>
+					  <td><input type="text" name="s7" value={{user.education.s7}} </td>
+					  <td><input type="text" name="c7" value={{user.education.c7}} </td>
+                      <td><input type="text" name="y7" value={{user.education.y7}} </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="d8" value={{user.education.d8}} </td>
+					  <td><input type="text" name="s8" value={{user.education.s8}} </td>
+					  <td><input type="text" name="c8" value={{user.education.c8}} </td>
+                      <td><input type="text" name="y8" value={{user.education.y8}} </td>
+                  </tr>
+                  </tbody>
+			  </table>
+				</div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'educationupdate' %}';">Update</button>
+				</div><br>
+    <label class="text">Other Work Experience:</label>
+			<div class="table-styl">
+			<table class="table table-striped table-dark table-responsive-lg hideRowContainingZeroValue">
+				<thead>
+				  <tr>
+                      <th scope="col">Designation </th>
+					  <th scope="col">Institution / Company</th>
+					  <th scope="col">Year - From (month/year) To (month/year)</th>
+					  </tr>
+				</thead>
+				<tbody>
+                <tr>
+                      <td><input type="text" name="d1" value={{user.oe.d1}} </td>
+					  <td><input type="text" name="i1" value={{user.oe.i1}} </td>
+					  <td><input type="text" name="y1" value={{user.oe.y1}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="d2" value={{user.oe.d2}} </td>
+					  <td><input type="text" name="i2" value={{user.oe.i2}} </td>
+					  <td><input type="text" name="y2" value={{user.oe.y2}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="d3" value={{user.oe.d3}} </td>
+					  <td><input type="text" name="i3" value={{user.oe.i3}} </td>
+					  <td><input type="text" name="y3" value={{user.oe.y3}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="d4" value={{user.oe.d4}} </td>
+					  <td><input type="text" name="i4" value={{user.oe.i4}} </td>
+					  <td><input type="text" name="y4" value={{user.oe.y4}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="d5" value={{user.oe.d5}} </td>
+					  <td><input type="text" name="i5" value={{user.oe.i5}} </td>
+					  <td><input type="text" name="y5" value={{user.oe.y5}} </td>
+                  </tr>
+                </tbody>
+			  </table>
+				</div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'oeupdate' %}';">Update</button>
+				</div><br>
+    <label class="text">Administrative /Academic Position/s (held/currently holding):
+</label>
+			<div class="table-styl">
+			<table class="table table-striped table-dark table-responsive-lg hideRowContainingZeroValue">
+				<thead>
+				  <tr>
+                      <th scope="col">Positions held / currently holding </th>
+					  <th scope="col">Year - From (month/year) To month/year)</th>
+					  </tr>
+				</thead>
+				<tbody>
+                <tr>
+                      <td><input type="text" name="ph1" value={{user.ap.ph1}} </td>
+					  <td><input type="text" name="y1" value={{user.ap.y1}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph2" value={{user.ap.ph2}} </td>
+					  <td><input type="text" name="y2" value={{user.ap.y2}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph3" value={{user.ap.ph3}} </td>
+					  <td><input type="text" name="y3" value={{user.ap.y3}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph4" value={{user.ap.ph4}} </td>
+					  <td><input type="text" name="y4" value={{user.ap.y4}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph5" value={{user.ap.ph5}} </td>
+					  <td><input type="text" name="y5" value={{user.ap.y5}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph6" value={{user.ap.ph6}} </td>
+					  <td><input type="text" name="y6" value={{user.ap.y6}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph7" value={{user.ap.ph7}} </td>
+					  <td><input type="text" name="y7" value={{user.ap.y7}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph8" value={{user.ap.ph8}} </td>
+					  <td><input type="text" name="y8" value={{user.ap.y8}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph9" value={{user.ap.ph9}} </td>
+					  <td><input type="text" name="y9" value={{user.ap.y9}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph10" value={{user.ap.ph10}} </td>
+					  <td><input type="text" name="y10" value={{user.ap.y10}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph11" value={{user.ap.ph11}} </td>
+					  <td><input type="text" name="y11" value={{user.ap.y11}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph12" value={{user.ap.ph12}} </td>
+					  <td><input type="text" name="y12" value={{user.ap.y12}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph13" value={{user.ap.ph13}} </td>
+					  <td><input type="text" name="y13" value={{user.ap.y13}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph14" value={{user.ap.ph14}} </td>
+					  <td><input type="text" name="y14" value={{user.ap.y14}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph15" value={{user.ap.ph15}} </td>
+					  <td><input type="text" name="y15" value={{user.ap.y15}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph16" value={{user.ap.ph16}} </td>
+					  <td><input type="text" name="y16" value={{user.ap.y16}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph17" value={{user.ap.ph17}} </td>
+					  <td><input type="text" name="y17" value={{user.ap.y17}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph18" value={{user.ap.ph18}} </td>
+					  <td><input type="text" name="y18" value={{user.ap.y18}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph19" value={{user.ap.ph19}} </td>
+					  <td><input type="text" name="y19" value={{user.ap.y19}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph20" value={{user.ap.ph20}} </td>
+					  <td><input type="text" name="y20" value={{user.ap.y20}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph21" value={{user.ap.ph21}} </td>
+					  <td><input type="text" name="y21" value={{user.ap.y21}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph22" value={{user.ap.ph22}} </td>
+					  <td><input type="text" name="y22" value={{user.ap.y22}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph23" value={{user.ap.ph23}} </td>
+					  <td><input type="text" name="y23" value={{user.ap.y23}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph24" value={{user.ap.ph24}} </td>
+					  <td><input type="text" name="y24" value={{user.ap.y24}} </td>
+                  </tr>
+                <tr>
+                      <td><input type="text" name="ph25" value={{user.ap.ph25}} </td>
+					  <td><input type="text" name="y25" value={{user.ap.y25}} </td>
+                  </tr>
+                 </tbody>
+			  </table>
+				</div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'apupdate' %}';">Update</button>
+				</div><br>
+	<label class="text">Articles Published in National & International Journals:</label>
+			<div class="table-styl">
+			<table class="table table-striped table-dark table-responsive-lg hideRowContainingZeroValue">
+				<thead>
+				  <tr>
+					  <th scope="col">S.No.</th>
+					  <th scope="col">Title</th>
+					  <th scope="col">Year</th>
+					  <th scope="col">Journal & ISBN , ISSN</th>
+					  <th scope="col">International/National</th>
+					  </tr>
+				</thead>
+				<tbody>
+                <tr>
+					<th scope="row">1</th>
+                      <td><input type="text" name="t1" value={{user.article.t1}} </td>
+					  <td><input type="text" name="y1" value={{user.article.y1}} </td>
+						<td><input type="text" name="j1" value={{user.article.j1}} </td>
+						<td><input type="text" name="n1" value={{user.article.n1}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">2</th>
+                      <td><input type="text" name="t2" value={{user.article.t2}} </td>
+					  <td><input type="text" name="y2" value={{user.article.y2}} </td>
+						<td><input type="text" name="j2" value={{user.article.j2}} </td>
+						<td><input type="text" name="n2" value={{user.article.n2}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">3</th>
+                      <td><input type="text" name="t3" value={{user.article.t3}} </td>
+					  <td><input type="text" name="y3" value={{user.article.y3}} </td>
+						<td><input type="text" name="j3" value={{user.article.j3}} </td>
+						<td><input type="text" name="n3" value={{user.article.n3}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">4</th>
+                      <td><input type="text" name="t4" value={{user.article.t4}} </td>
+					  <td><input type="text" name="y4" value={{user.article.y4}} </td>
+						<td><input type="text" name="j4" value={{user.article.j4}} </td>
+						<td><input type="text" name="n4" value={{user.article.n4}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">5</th>
+                      <td><input type="text" name="t5" value={{user.article.t5}} </td>
+					  <td><input type="text" name="y5" value={{user.article.y5}} </td>
+						<td><input type="text" name="j5" value={{user.article.j5}} </td>
+						<td><input type="text" name="n5" value={{user.article.n5}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">6</th>
+                      <td><input type="text" name="t6" value={{user.article.t6}} </td>
+					  <td><input type="text" name="y6" value={{user.article.y6}} </td>
+						<td><input type="text" name="j6" value={{user.article.j6}} </td>
+						<td><input type="text" name="n6" value={{user.article.n6}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">7</th>
+                      <td><input type="text" name="t7" value={{user.article.t7}} </td>
+					  <td><input type="text" name="y7" value={{user.article.y7}} </td>
+						<td><input type="text" name="j7" value={{user.article.j7}} </td>
+						<td><input type="text" name="n7" value={{user.article.n7}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">8</th>
+                      <td><input type="text" name="t8" value={{user.article.t8}} </td>
+					  <td><input type="text" name="y8" value={{user.article.y8}} </td>
+						<td><input type="text" name="j8" value={{user.article.j8}} </td>
+						<td><input type="text" name="n8" value={{user.article.n8}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">9</th>
+                      <td><input type="text" name="t9" value={{user.article.t9}} </td>
+					  <td><input type="text" name="y9" value={{user.article.y9}} </td>
+						<td><input type="text" name="j9" value={{user.article.j9}} </td>
+						<td><input type="text" name="n9" value={{user.article.n9}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">10</th>
+                      <td><input type="text" name="t10" value={{user.article.t10}} </td>
+					  <td><input type="text" name="y10" value={{user.article.y10}} </td>
+						<td><input type="text" name="j10" value={{user.article.j10}} </td>
+						<td><input type="text" name="n10" value={{user.article.n10}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">11</th>
+                      <td><input type="text" name="t11" value={{user.article.t11}} </td>
+					  <td><input type="text" name="y11" value={{user.article.y11}} </td>
+						<td><input type="text" name="j11" value={{user.article.j11}} </td>
+						<td><input type="text" name="n11" value={{user.article.n11}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">12</th>
+                      <td><input type="text" name="t12" value={{user.article.t12}} </td>
+					  <td><input type="text" name="y12" value={{user.article.y12}} </td>
+						<td><input type="text" name="j12" value={{user.article.j12}} </td>
+						<td><input type="text" name="n12" value={{user.article.n12}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">13</th>
+                      <td><input type="text" name="t13" value={{user.article.t13}} </td>
+					  <td><input type="text" name="y13" value={{user.article.y13}} </td>
+						<td><input type="text" name="j13" value={{user.article.j13}} </td>
+						<td><input type="text" name="n13" value={{user.article.n13}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">14</th>
+                      <td><input type="text" name="t14" value={{user.article.t14}} </td>
+					  <td><input type="text" name="y14" value={{user.article.y14}} </td>
+						<td><input type="text" name="j14" value={{user.article.j14}} </td>
+						<td><input type="text" name="n14" value={{user.article.n14}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">15</th>
+                      <td><input type="text" name="t15" value={{user.article.t15}} </td>
+					  <td><input type="text" name="y15" value={{user.article.y15}} </td>
+						<td><input type="text" name="j15" value={{user.article.j15}} </td>
+						<td><input type="text" name="n15" value={{user.article.n15}} </td>
+                  </tr>
+				</tbody>
+			  </table>
+				</div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'articleupdate' %}';">Update</button>
+				</div><br>
+
+	<label class="text">Conference/Seminar Presentations:</label>
+			<div class="table-styl">
+			<table class="table table-striped table-dark table-responsive-lg hideRowContainingZeroValue">
+				<thead>
+				  <tr>
+					   <th scope="col">S.No.</th>
+					  <th scope="col">Workshop</th>
+					  <th scope="col">Title</th>
+					  <th scope="col">Year</th>
+					  <th scope="col">Year</th>
+					  <th scope="col">International/National</th>
+					  </tr>
+				</thead>
+				<tbody>
+                <tr>
+					<th scope="row">1</th>
+                      <td><input type="text" name="w1" value={{user.seminar.w1}} </td>
+					  <td><input type="text" name="t1" value={{user.seminar.t1}} </td>
+						<td><input type="text" name="y1" value={{user.seminar.y1}} </td>
+						<td><input type="text" name="i1" value={{user.seminar.i1}} </td>
+						<td><input type="text" name="n1" value={{user.seminar.n1}} </td>
+                  </tr>
+				 <tr>
+					<th scope="row">2</th>
+                 <td><input type="text" name="w2" value={{user.seminar.w2}} </td>
+  <td><input type="text" name="t2" value={{user.seminar.t2}} </td>
+   <td><input type="text" name="y2" value={{user.seminar.y2}} </td>
+   <td><input type="text" name="i2" value={{user.seminar.i2}} </td>
+   <td><input type="text" name="n2" value={{user.seminar.n2}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">3</th>
+                 <td><input type="text" name="w3" value={{user.seminar.w3}} </td>
+  <td><input type="text" name="t3" value={{user.seminar.t3}} </td>
+   <td><input type="text" name="y3" value={{user.seminar.y3}} </td>
+   <td><input type="text" name="i3" value={{user.seminar.i3}} </td>
+   <td><input type="text" name="n3" value={{user.seminar.n3}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">4</th>
+                 <td><input type="text" name="w4" value={{user.seminar.w4}} </td>
+  <td><input type="text" name="t4" value={{user.seminar.t4}} </td>
+   <td><input type="text" name="y4" value={{user.seminar.y4}} </td>
+   <td><input type="text" name="i4" value={{user.seminar.i4}} </td>
+   <td><input type="text" name="n4" value={{user.seminar.n4}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">5</th>
+                 <td><input type="text" name="w5" value={{user.seminar.w5}} </td>
+  <td><input type="text" name="t5" value={{user.seminar.t5}} </td>
+   <td><input type="text" name="y5" value={{user.seminar.y5}} </td>
+   <td><input type="text" name="i5" value={{user.seminar.i5}} </td>
+   <td><input type="text" name="n5" value={{user.seminar.n5}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">6</th>
+                 <td><input type="text" name="w6" value={{user.seminar.w6}} </td>
+  <td><input type="text" name="t6" value={{user.seminar.t6}} </td>
+   <td><input type="text" name="y6" value={{user.seminar.y6}} </td>
+   <td><input type="text" name="i6" value={{user.seminar.i6}} </td>
+   <td><input type="text" name="n6" value={{user.seminar.n6}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">7</th>
+                 <td><input type="text" name="w7" value={{user.seminar.w7}} </td>
+  <td><input type="text" name="t7" value={{user.seminar.t7}} </td>
+   <td><input type="text" name="y7" value={{user.seminar.y7}} </td>
+   <td><input type="text" name="i7" value={{user.seminar.i7}} </td>
+   <td><input type="text" name="n7" value={{user.seminar.n7}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">8</th>
+                 <td><input type="text" name="w8" value={{user.seminar.w8}} </td>
+  <td><input type="text" name="t8" value={{user.seminar.t8}} </td>
+   <td><input type="text" name="y8" value={{user.seminar.y8}} </td>
+   <td><input type="text" name="i8" value={{user.seminar.i8}} </td>
+   <td><input type="text" name="n8" value={{user.seminar.n8}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">9</th>
+                 <td><input type="text" name="w9" value={{user.seminar.w9}} </td>
+  <td><input type="text" name="t9" value={{user.seminar.t9}} </td>
+   <td><input type="text" name="y9" value={{user.seminar.y9}} </td>
+   <td><input type="text" name="i9" value={{user.seminar.i9}} </td>
+   <td><input type="text" name="n9" value={{user.seminar.n9}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">10</th>
+                 <td><input type="text" name="w10" value={{user.seminar.w10}} </td>
+  <td><input type="text" name="t10" value={{user.seminar.t10}} </td>
+   <td><input type="text" name="y10" value={{user.seminar.y10}} </td>
+   <td><input type="text" name="i10" value={{user.seminar.i10}} </td>
+   <td><input type="text" name="n10" value={{user.seminar.n10}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">11</th>
+                 <td><input type="text" name="w11" value={{user.seminar.w11}} </td>
+  <td><input type="text" name="t11" value={{user.seminar.t11}} </td>
+   <td><input type="text" name="y11" value={{user.seminar.y11}} </td>
+   <td><input type="text" name="i11" value={{user.seminar.i11}} </td>
+   <td><input type="text" name="n11" value={{user.seminar.n11}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">12</th>
+                 <td><input type="text" name="w12" value={{user.seminar.w12}} </td>
+  <td><input type="text" name="t12" value={{user.seminar.t12}} </td>
+   <td><input type="text" name="y12" value={{user.seminar.y12}} </td>
+   <td><input type="text" name="i12" value={{user.seminar.i12}} </td>
+   <td><input type="text" name="n12" value={{user.seminar.n12}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">13</th>
+                 <td><input type="text" name="w13" value={{user.seminar.w13}} </td>
+  <td><input type="text" name="t13" value={{user.seminar.t13}} </td>
+   <td><input type="text" name="y13" value={{user.seminar.y13}} </td>
+   <td><input type="text" name="i13" value={{user.seminar.i13}} </td>
+   <td><input type="text" name="n13" value={{user.seminar.n13}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">14</th>
+                 <td><input type="text" name="w14" value={{user.seminar.w14}} </td>
+  <td><input type="text" name="t14" value={{user.seminar.t14}} </td>
+   <td><input type="text" name="y14" value={{user.seminar.y14}} </td>
+   <td><input type="text" name="i14" value={{user.seminar.i14}} </td>
+   <td><input type="text" name="n14" value={{user.seminar.n14}} </td>
+
+                  </tr>
+				 <tr>
+					<th scope="row">15</th>
+                 <td><input type="text" name="w15" value={{user.seminar.w15}} </td>
+  <td><input type="text" name="t15" value={{user.seminar.t15}} </td>
+   <td><input type="text" name="y15" value={{user.seminar.y15}} </td>
+   <td><input type="text" name="i15" value={{user.seminar.i15}} </td>
+   <td><input type="text" name="n15" value={{user.seminar.n15}} </td>
+
+                  </tr>
+				</tbody>
+			  </table>
+				</div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'seminarupdate' %}';">Update</button>
+				</div><br>
+
+	</div>
+</form>
+	<script>
+   $('.hideRowContainingZeroValue input').filter(function(){
+      return +this.value === 0;
+   }).closest("tr").hide()
+</script>
+
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initialscale=1.0">
+<title>Document</title>
+
+</head>
+<body>
+name={{user.profile.name}}<br>
+
+oa={{user.profile.oa}}<br>
+<valuem method="post">
+    {%csrf_token%}
+
+<table class="hideRowContainingZeroValue">
+    <tr>
+        <th>Degree</th>
+        <th>Subject</th>
+        <th>College/University & Place</th>
+        <th>Year Completed</th>
+    </tr>
+       <tr>
+        <td><input type=“text” name=“d1“ value={{user.education.d1}}  </td>
+        <td><input type=“text” name=“s1“ value={{user.education.s1}}  </td>
+        <td><input type=“text” name=“c1“ value={{user.education.c1}}  </td>
+        <td><input type=“text” name=“y1“ value={{user.education.y1}}  </td>
+    </tr>
+    <tr>
+    <td><input type=“text” name=“d2“ value={{user.education.d2}}  </td>
+    <td><input type=“text” name=“s2“ value={{user.education.s2}}  </td>
+    <td><input type=“text” name=“c2“ value={{user.education.c2}}  </td>
+    <td><input type=“text” name=“y2“ value={{user.education.y2}}  </td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d3“ value={{user.education.d3}}  </td>
+    <td><input type=“text” name=“s3“ value={{user.education.s3}}  </td>
+    <td><input type=“text” name=“c3“ value={{user.education.c3}}  </td>
+    <td><input type=“text” name=“y3“ value={{user.education.y3}}  </td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d4“ value={{user.education.d4}}  </td>
+    <td><input type=“text” name=“s4“ value={{user.education.s4}}  </td>
+    <td><input type=“text” name=“c4“ value={{user.education.c4}}  </td>
+    <td><input type=“text” name=“y4“ value={{user.education.y4}}  </td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d5“ value={{user.education.d5}}  </td>
+    <td><input type=“text” name=“s5“ value={{user.education.s5}}  </td>
+    <td><input type=“text” name=“c5“ value={{user.education.c5}}  </td>
+    <td><input type=“text” name=“y5“ value={{user.education.y5}}  </td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d6“ value={{user.education.d6}}  </td>
+    <td><input type=“text” name=“s6“ value={{user.education.s6}}  </td>
+    <td><input type=“text” name=“c6“ value={{user.education.c6}}  </td>
+    <td><input type=“text” name=“y6“ value={{user.education.y6}}  </td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d7“ value={{user.education.d7}}  </td>
+    <td><input type=“text” name=“s7“ value={{user.education.s7}}  </td>
+    <td><input type=“text” name=“c7“ value={{user.education.c7}}  </td>
+    <td><input type=“text” name=“y7“ value={{user.education.y7}}  </td>
+</tr>
+<tr>
+    <td><input type=“text” name=“d8“ value={{user.education.d8}}  </td>
+    <td><input type=“text” name=“s8“ value={{user.education.s8}}  </td>
+    <td><input type=“text” name=“c8“ value={{user.education.c8}}  </td>
+    <td><input type=“text” name=“y8“ value={{user.education.y8}}  </td>
+</tr>
+</table>
+
+
+
+<a href="{%url 'staffupdate' %}">update</a>
+    <a href="{%url 'educationupdate' %}">update</a>
+    <a href="{%url 'oeupdate' %}">update other</a>
+    <a href="{%url 'apupdate' %}">update academic</a>
+    <a href="{%url 'articleupdate' %}">update article</a>
+    <a href="{%url 'seminarupdate' %}">update seminar</a>
+    </body>
+</html>

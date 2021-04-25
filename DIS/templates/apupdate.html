@@ -1,0 +1,162 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Mark</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css2/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="#" method="POST">
+		{%csrf_token%}
+		<h1 style="color:#FFFFFF">Administrative /Academic Position/s (held/currently holding)</h1>
+	<div class="table-styl">
+		<table class="table table-striped table-dark table-responsive-lg">
+			<thead>
+                  <tr>
+                <th scope="col">Positions held / currently holding </th>
+					  <th scope="col">Year - From (month/year) To month/year)</th>
+					  </tr>
+				</thead>
+				<tbody>
+                <tr>
+            <td><input type="text" name="ph1" for={{form.ph1}} </td>
+     <td><input type="text" name="y1" for={{form.y1}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph2" for={{form.ph2}} </td>
+     <td><input type="text" name="y2" for={{form.y2}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph3" for={{form.ph3}} </td>
+     <td><input type="text" name="y3" for={{form.y3}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph4" for={{form.ph4}} </td>
+     <td><input type="text" name="y4" for={{form.y4}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph5" for={{form.ph5}} </td>
+     <td><input type="text" name="y5" for={{form.y5}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph6" for={{form.ph6}} </td>
+     <td><input type="text" name="y6" for={{form.y6}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph7" for={{form.ph7}} </td>
+     <td><input type="text" name="y7" for={{form.y7}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph8" for={{form.ph8}} </td>
+     <td><input type="text" name="y8" for={{form.y8}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph9" for={{form.ph9}} </td>
+     <td><input type="text" name="y9" for={{form.y9}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph10" for={{form.ph10}} </td>
+     <td><input type="text" name="y10" for={{form.y10}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph11" for={{form.ph11}} </td>
+     <td><input type="text" name="y11" for={{form.y11}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph12" for={{form.ph12}} </td>
+     <td><input type="text" name="y12" for={{form.y12}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph13" for={{form.ph13}} </td>
+     <td><input type="text" name="y13" for={{form.y13}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph14" for={{form.ph14}} </td>
+     <td><input type="text" name="y14" for={{form.y14}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph15" for={{form.ph15}} </td>
+     <td><input type="text" name="y15" for={{form.y15}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph16" for={{form.ph16}} </td>
+     <td><input type="text" name="y16" for={{form.y16}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph17" for={{form.ph17}} </td>
+     <td><input type="text" name="y17" for={{form.y17}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph18" for={{form.ph18}} </td>
+     <td><input type="text" name="y18" for={{form.y18}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph19" for={{form.ph19}} </td>
+     <td><input type="text" name="y19" for={{form.y19}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph20" for={{form.ph20}} </td>
+     <td><input type="text" name="y20" for={{form.y20}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph21" for={{form.ph21}} </td>
+     <td><input type="text" name="y21" for={{form.y21}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph22" for={{form.ph22}} </td>
+     <td><input type="text" name="y22" for={{form.y22}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph23" for={{form.ph23}} </td>
+     <td><input type="text" name="y23" for={{form.y23}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph24" for={{form.ph24}} </td>
+     <td><input type="text" name="y24" for={{form.y24}} </td>
+              </tr>
+            <tr>
+                  <td><input type="text" name="ph25" for={{form.ph25}} </td>
+     <td><input type="text" name="y25" for={{form.y25}} </td>
+              </tr>
+             </tbody>
+ </table>
+</div>
+
+  <div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Update" onclick="myFunction()">
+		</div>
+</form>
+</div>
+ <script>
+             function myFunction() {
+                     alert("Updated Successfully");
+}
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,91 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="#" method="get">
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Name</label>
+				<div class="amc-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="roll_no" placeholder="Roll Number" for={{myFilter.form.rolll_no}}/>
+				</div>
+			</div> 
+			<div class="amc-grid2">
+			<label class="text">Roll Number</label>
+			<div class="amc-div">
+				<i class="fa fa-address-book" aria-hidden="true"></i>
+				<input type="text" name="name" placeholder="Name"  for={{myFilter.form.name}}
+			</div>
+			</div>
+			<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="Search"><br><br>
+
+		</div>
+			</form>
+<div class="clear"></div>
+
+</div>
+			<div class="clear"></div>
+			<div class="table-styl"> <!-- ADDED NEW -->
+			<table class="table table-striped table-dark ">
+				<thead>
+				  <tr>
+					<th scope="col">Roll No</th>
+					<th scope="col">Name</th>
+					<th scope="col">View</th>
+					<th scope="col">Delete</th>
+				  </tr>
+				</thead>
+				<tbody>
+				{%for i in user%}
+				  <tr>
+					<th scope="row">{{i.roll_no}}</th>
+					<td>{{i.name}}</td>
+					<th scope="col"><button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{% url 'viewpage' i.id%}';">View</button></th>
+					<th scope="col"><button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{% url 'deleteuser' i.id%}';">Delete</button></th>
+				  </tr>
+				 {%endfor%}
+				</tbody>
+			  </table>
+			</div>
+<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+
+</html>

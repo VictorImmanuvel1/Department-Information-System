@@ -1,0 +1,767 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Viewpage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="#" medthod="post">
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Roll Number</label>
+				<div class="amc-divSd">
+						{{user.roll_no}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Name</label>
+			<div class="amc-divSd">
+					{{user.name}}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Mobile Number</label>
+				<div class="amc-divSd">
+						{{user.ph_no}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Email</label>
+			<div class="amc-divSd">
+					{{user.email}}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Gender</label>
+				<div class="amc-divSd">
+						{{user.gender}}
+					<!---728x90--->
+
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">DOB</label>
+				<div class="amc-divSd">
+				 {{user.dob}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Father Name</label>
+				<div class="amc-divSd">
+						{{user.father_name}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Father Number</label>
+				<div class="amc-divSd">
+						{{user.father_no}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Religion</label>
+				<div class="amc-divSd">
+						{{user.religion}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Caste</label>
+				<div class="amc-divSd">
+						{{user.caste}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="amc-right-grid1">
+			<div class="amc-grid1">
+				<label class="text">Martial Status</label>
+				<div class="amc-divSd">
+						{{user.status}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Mother Tongue</label>
+				<div class="amc-divSd">
+						{{user.mtongue}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="amc-right-grid1">
+			<div class="amc-grid1">
+				<label class="text">Blood Group</label>
+				<div class="amc-divSd">
+						{{user.bgroup}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Nationality</label>
+				<div class="amc-divSd">
+						{{user.nation}}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="amc-right-grid1">
+		<div class="amc-grid1">
+			<label class="text">Hostel/Dayscholar<span>?</span></label>
+				<div class="amc-divSd">
+						{{user.hostel}}
+				</div>
+		</div>
+			<label class="text">Management/Government Quota</label>
+			<div class="amc-grid2">
+				<div class="amc-divSd">
+						{{user.morg}}
+				</div>
+			</div>
+		</div>
+
+		<div class="amc-right-grid1">
+			<div class="amc-grid1">
+				<label class="text">Sports Person<span>?</span></label>
+					<div class="amc-divSd">
+							{{user.sports}}
+					</div>
+			</div>
+			<div class="amc-grid2">
+				<label class="text">Percentage of Last Studies</label>
+				<div class="amc-divSd">
+						{{user.lmark}}
+				</div>
+
+			</div>
+			<div class="clear"></div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'updatepage' user.id%}';">Update info</button>
+				</div><br>
+			<label class="text">Current Marks</label><br>
+			<label class="text">Semester 1:</label>
+			<div class="table-styl">
+			<table class="table table-striped table-dark table-responsive-lg">
+				<thead>
+				  <tr>
+					<th scope="col">S.No.</th>
+					<th scope="col">Subj.Code</th>
+					<th scope="col">Subj.Name</th>
+					<th scope="col">T1</th>
+					<th scope="col">Q1</th>
+					<th scope="col">A1</th>
+					<th scope="col">T2</th>
+					<th scope="col">Q2</th>
+					<th scope="col">A2</th>
+					<th scope="col">Total</th>
+					<th scope="col">External</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>{{mark.SC1}}</td>
+					  <td>{{mark.SN1}}</td>
+					  <td>{{mark.T11}}</td>
+        <td>{{mark.Q11}}</td>
+        <td>{{mark.A11}}</td>
+        <td>{{mark.T21}}</td>
+        <td>{{mark.Q21}}</td>
+        <td>{{mark.A21}}</td>
+        <td>{{mark.TO1}}</td>
+        <td>{{mark.E1}}</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>{{mark.SC2}}</td>
+        <td>{{mark.SN2}}</td>
+        <td>{{mark.T12}}</td>
+        <td>{{mark.Q12}}</td>
+        <td>{{mark.A12}}</td>
+        <td>{{mark.T22}}</td>
+        <td>{{mark.Q22}}</td>
+        <td>{{mark.A22}}</td>
+        <td>{{mark.TO2}}</td>
+        <td>{{mark.E2}}</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+            <td>{{mark.SC3}}</td>
+        <td>{{mark.SN3}}</td>
+        <td>{{mark.T13}}</td>
+        <td>{{mark.Q13}}</td>
+        <td>{{mark.A13}}</td>
+        <td>{{mark.T23}}</td>
+        <td>{{mark.Q23}}</td>
+        <td>{{mark.A23}}</td>
+        <td>{{mark.TO3}}</td>
+        <td>{{mark.E3}}</td>
+				  </tr>
+				  <th scope="row">4</th>
+					<td>{{mark.SC4}}</td>
+        <td>{{mark.SN4}}</td>
+        <td>{{mark.T14}}</td>
+        <td>{{mark.Q14}}</td>
+        <td>{{mark.A14}}</td>
+        <td>{{mark.T24}}</td>
+        <td>{{mark.Q24}}</td>
+        <td>{{mark.A24}}</td>
+        <td>{{mark.TO4}}</td>
+        <td>{{mark.E4}}</td>
+				  </tr>
+				  <th scope="row">5</th>
+					<td>{{mark.SC5}}</td>
+        <td>{{mark.SN5}}</td>
+        <td>{{mark.T15}}</td>
+        <td>{{mark.Q15}}</td>
+        <td>{{mark.A15}}</td>
+        <td>{{mark.T25}}</td>
+        <td>{{mark.Q25}}</td>
+        <td>{{mark.A25}}</td>
+        <td>{{mark.TO5}}</td>
+        <td>{{mark.E5}}</td>
+				  </tr>
+				  <th scope="row">6</th>
+					<td>{{mark.SC6}}</td>
+        <td>{{mark.SN6}}</td>
+        <td>{{mark.T16}}</td>
+        <td>{{mark.Q16}}</td>
+        <td>{{mark.A16}}</td>
+        <td>{{mark.T26}}</td>
+        <td>{{mark.Q26}}</td>
+        <td>{{mark.A26}}</td>
+        <td>{{mark.TO6}}</td>
+        <td>{{mark.E6}}</td>
+				  </tr>
+				  <th scope="row">7</th>
+					<td>{{mark.SC7}}</td>
+        <td>{{mark.SN7}}</td>
+        <td>{{mark.T17}}</td>
+        <td>{{mark.Q17}}</td>
+        <td>{{mark.A17}}</td>
+        <td>{{mark.T27}}</td>
+        <td>{{mark.Q27}}</td>
+        <td>{{mark.A27}}</td>
+        <td>{{mark.TO7}}</td>
+        <td>{{mark.E7}}</td>
+				  </tr>
+				</tbody>
+			  </table>
+				</div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'updatesem1' user.id%}';">Update Sem1</button>
+				</div><br>
+
+				<label class="text">Semester 2:</label>
+				<div class="table-styl">
+				<table class="table table-striped table-dark table-responsive-lg">
+					<thead>
+						<tr>
+						<th scope="col">S.No.</th>
+						<th scope="col">Subj.Code</th>
+						<th scope="col">Subj.Name</th>
+						<th scope="col">T1</th>
+						<th scope="col">Q1</th>
+						<th scope="col">A1</th>
+						<th scope="col">T2</th>
+						<th scope="col">Q2</th>
+						<th scope="col">A2</th>
+						<th scope="col">Total</th>
+						<th scope="col">External</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+<th scope="row">1</th>
+<td>{{mark1.SC1}}</td>
+        <td>{{mark1.SN1}}</td>
+        <td>{{mark1.T11}}</td>
+        <td>{{mark1.Q11}}</td>
+        <td>{{mark1.A11}}</td>
+        <td>{{mark1.T21}}</td>
+        <td>{{mark1.Q21}}</td>
+        <td>{{mark1.A21}}</td>
+        <td>{{mark1.TO1}}</td>
+        <td>{{mark1.E1}}</td>
+ </tr>
+ <tr>
+<th scope="row">2</th>
+<td>{{mark1.SC2}}</td>
+        <td>{{mark1.SN2}}</td>
+        <td>{{mark1.T12}}</td>
+        <td>{{mark1.Q12}}</td>
+        <td>{{mark1.A12}}</td>
+        <td>{{mark1.T22}}</td>
+        <td>{{mark1.Q22}}</td>
+        <td>{{mark1.A22}}</td>
+        <td>{{mark1.TO2}}</td>
+        <td>{{mark1.E2}}</td>
+ </tr>
+ <tr>
+<th scope="row">3</th>
+<td>{{mark1.SC3}}</td>
+        <td>{{mark1.SN3}}</td>
+        <td>{{mark1.T13}}</td>
+        <td>{{mark1.Q13}}</td>
+        <td>{{mark1.A13}}</td>
+        <td>{{mark1.T23}}</td>
+        <td>{{mark1.Q23}}</td>
+        <td>{{mark1.A23}}</td>
+        <td>{{mark1.TO3}}</td>
+        <td>{{mark1.E3}}</td>
+ </tr>
+ <th scope="row">4</th>
+<td>{{mark1.SC4}}</td>
+        <td>{{mark1.SN4}}</td>
+        <td>{{mark1.T14}}</td>
+        <td>{{mark1.Q14}}</td>
+        <td>{{mark1.A14}}</td>
+        <td>{{mark1.T24}}</td>
+        <td>{{mark1.Q24}}</td>
+        <td>{{mark1.A24}}</td>
+        <td>{{mark1.TO4}}</td>
+        <td>{{mark1.E4}}</td>
+ </tr>
+ <th scope="row">5</th>
+<td>{{mark1.SC5}}</td>
+        <td>{{mark1.SN5}}</td>
+        <td>{{mark1.T15}}</td>
+        <td>{{mark1.Q15}}</td>
+        <td>{{mark1.A15}}</td>
+        <td>{{mark1.T25}}</td>
+        <td>{{mark1.Q25}}</td>
+        <td>{{mark1.A25}}</td>
+        <td>{{mark1.TO5}}</td>
+        <td>{{mark1.E5}}</td>
+ </tr>
+ <th scope="row">6</th>
+<td>{{mark1.SC6}}</td>
+        <td>{{mark1.SN6}}</td>
+        <td>{{mark1.T16}}</td>
+        <td>{{mark1.Q16}}</td>
+        <td>{{mark1.A16}}</td>
+        <td>{{mark1.T26}}</td>
+        <td>{{mark1.Q26}}</td>
+        <td>{{mark1.A26}}</td>
+        <td>{{mark1.TO6}}</td>
+        <td>{{mark1.E6}}</td>
+ </tr>
+ <th scope="row">7</th>
+<td>{{mark1.SC7}}</td>
+        <td>{{mark1.SN7}}</td>
+        <td>{{mark1.T17}}</td>
+        <td>{{mark1.Q17}}</td>
+        <td>{{mark1.A17}}</td>
+        <td>{{mark1.T27}}</td>
+        <td>{{mark1.Q27}}</td>
+        <td>{{mark1.A27}}</td>
+        <td>{{mark1.TO7}}</td>
+        <td>{{mark1.E7}}</td>
+ </tr>
+
+
+					</tbody>
+					</table>
+					</div>
+				<div class="admin-home-logout">
+					<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'updatesem2' user.id%}';">Update Sem2</button>
+				</div><br>
+
+					<label class="text">Semester 3:</label>
+					<div class="table-styl">
+					<table class="table table-striped table-dark table-responsive-lg">
+						<thead>
+						  <tr>
+							<th scope="col">S.No.</th>
+							<th scope="col">Subj.Code</th>
+							<th scope="col">Subj.Name</th>
+							<th scope="col">T1</th>
+							<th scope="col">Q1</th>
+							<th scope="col">A1</th>
+							<th scope="col">T2</th>
+							<th scope="col">Q2</th>
+							<th scope="col">A2</th>
+							<th scope="col">Total</th>
+							<th scope="col">External</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+<th scope="row">1</th>
+<td>{{mark2.SC1}}</td>
+        <td>{{mark2.SN1}}</td>
+        <td>{{mark2.T11}}</td>
+        <td>{{mark2.Q11}}</td>
+        <td>{{mark2.A11}}</td>
+        <td>{{mark2.T21}}</td>
+        <td>{{mark2.Q21}}</td>
+        <td>{{mark2.A21}}</td>
+        <td>{{mark2.TO1}}</td>
+        <td>{{mark2.E1}}</td>
+ </tr>
+ <tr>
+<th scope="row">2</th>
+<td>{{mark2.SC2}}</td>
+        <td>{{mark2.SN2}}</td>
+        <td>{{mark2.T12}}</td>
+        <td>{{mark2.Q12}}</td>
+        <td>{{mark2.A12}}</td>
+        <td>{{mark2.T22}}</td>
+        <td>{{mark2.Q22}}</td>
+        <td>{{mark2.A22}}</td>
+        <td>{{mark2.TO2}}</td>
+        <td>{{mark2.E2}}</td>
+ </tr>
+ <tr>
+<th scope="row">3</th>
+<td>{{mark2.SC3}}</td>
+        <td>{{mark2.SN3}}</td>
+        <td>{{mark2.T13}}</td>
+        <td>{{mark2.Q13}}</td>
+        <td>{{mark2.A13}}</td>
+        <td>{{mark2.T23}}</td>
+        <td>{{mark2.Q23}}</td>
+        <td>{{mark2.A23}}</td>
+        <td>{{mark2.TO3}}</td>
+        <td>{{mark2.E3}}</td>
+ </tr>
+ <th scope="row">4</th>
+<td>{{mark2.SC4}}</td>
+        <td>{{mark2.SN4}}</td>
+        <td>{{mark2.T14}}</td>
+        <td>{{mark2.Q14}}</td>
+        <td>{{mark2.A14}}</td>
+        <td>{{mark2.T24}}</td>
+        <td>{{mark2.Q24}}</td>
+        <td>{{mark2.A24}}</td>
+        <td>{{mark2.TO4}}</td>
+        <td>{{mark2.E4}}</td>
+ </tr>
+ <th scope="row">5</th>
+<td>{{mark2.SC5}}</td>
+        <td>{{mark2.SN5}}</td>
+        <td>{{mark2.T15}}</td>
+        <td>{{mark2.Q15}}</td>
+        <td>{{mark2.A15}}</td>
+        <td>{{mark2.T25}}</td>
+        <td>{{mark2.Q25}}</td>
+        <td>{{mark2.A25}}</td>
+        <td>{{mark2.TO5}}</td>
+        <td>{{mark2.E5}}</td>
+ </tr>
+ <th scope="row">6</th>
+<td>{{mark2.SC6}}</td>
+        <td>{{mark2.SN6}}</td>
+        <td>{{mark2.T16}}</td>
+        <td>{{mark2.Q16}}</td>
+        <td>{{mark2.A16}}</td>
+        <td>{{mark2.T26}}</td>
+        <td>{{mark2.Q26}}</td>
+        <td>{{mark2.A26}}</td>
+        <td>{{mark2.TO6}}</td>
+        <td>{{mark2.E6}}</td>
+ </tr>
+ <th scope="row">7</th>
+<td>{{mark2.SC7}}</td>
+        <td>{{mark2.SN7}}</td>
+        <td>{{mark2.T17}}</td>
+        <td>{{mark2.Q17}}</td>
+        <td>{{mark2.A17}}</td>
+        <td>{{mark2.T27}}</td>
+        <td>{{mark2.Q27}}</td>
+        <td>{{mark2.A27}}</td>
+        <td>{{mark2.TO7}}</td>
+        <td>{{mark2.E7}}</td>
+ </tr>
+
+
+						</tbody>
+					  </table>
+						</div>
+						<div class="admin-home-logout">
+							<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'updatesem3' user.id%}';">Update Sem3</button>
+						</div><br>
+
+						<label class="text">Semester 4:</label>
+               <div class="table-styl">
+               <table class="table table-striped table-dark table-responsive-lg">
+                  <thead>
+                    <tr>
+                     <th scope="col">S.No.</th>
+                     <th scope="col">Subj.Code</th>
+                     <th scope="col">Subj.Name</th>
+                     <th scope="col">T1</th>
+                     <th scope="col">Q1</th>
+                     <th scope="col">A1</th>
+                     <th scope="col">T2</th>
+                     <th scope="col">Q2</th>
+                     <th scope="col">A2</th>
+                     <th scope="col">Total</th>
+                     <th scope="col">External</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+<th scope="row">1</th>
+<td>{{mark3.SC1}}</td>
+        <td>{{mark3.SN1}}</td>
+        <td>{{mark3.T11}}</td>
+        <td>{{mark3.Q11}}</td>
+        <td>{{mark3.A11}}</td>
+        <td>{{mark3.T21}}</td>
+        <td>{{mark3.Q21}}</td>
+        <td>{{mark3.A21}}</td>
+        <td>{{mark3.TO1}}</td>
+        <td>{{mark3.E1}}</td>
+ </tr>
+ <tr>
+<th scope="row">2</th>
+<td>{{mark3.SC2}}</td>
+        <td>{{mark3.SN2}}</td>
+        <td>{{mark3.T12}}</td>
+        <td>{{mark3.Q12}}</td>
+        <td>{{mark3.A12}}</td>
+        <td>{{mark3.T22}}</td>
+        <td>{{mark3.Q22}}</td>
+        <td>{{mark3.A22}}</td>
+        <td>{{mark3.TO2}}</td>
+        <td>{{mark3.E2}}</td>
+ </tr>
+ <tr>
+<th scope="row">3</th>
+<td>{{mark3.SC3}}</td>
+        <td>{{mark3.SN3}}</td>
+        <td>{{mark3.T13}}</td>
+        <td>{{mark3.Q13}}</td>
+        <td>{{mark3.A13}}</td>
+        <td>{{mark3.T23}}</td>
+        <td>{{mark3.Q23}}</td>
+        <td>{{mark3.A23}}</td>
+        <td>{{mark3.TO3}}</td>
+        <td>{{mark3.E3}}</td>
+ </tr>
+ <th scope="row">4</th>
+<td>{{mark3.SC4}}</td>
+        <td>{{mark3.SN4}}</td>
+        <td>{{mark3.T14}}</td>
+        <td>{{mark3.Q14}}</td>
+        <td>{{mark3.A14}}</td>
+        <td>{{mark3.T24}}</td>
+        <td>{{mark3.Q24}}</td>
+        <td>{{mark3.A24}}</td>
+        <td>{{mark3.TO4}}</td>
+        <td>{{mark3.E4}}</td>
+ </tr>
+ <th scope="row">5</th>
+<td>{{mark3.SC5}}</td>
+        <td>{{mark3.SN5}}</td>
+        <td>{{mark3.T15}}</td>
+        <td>{{mark3.Q15}}</td>
+        <td>{{mark3.A15}}</td>
+        <td>{{mark3.T25}}</td>
+        <td>{{mark3.Q25}}</td>
+        <td>{{mark3.A25}}</td>
+        <td>{{mark3.TO5}}</td>
+        <td>{{mark3.E5}}</td>
+ </tr>
+ <th scope="row">6</th>
+<td>{{mark3.SC6}}</td>
+        <td>{{mark3.SN6}}</td>
+        <td>{{mark3.T16}}</td>
+        <td>{{mark3.Q16}}</td>
+        <td>{{mark3.A16}}</td>
+        <td>{{mark3.T26}}</td>
+        <td>{{mark3.Q26}}</td>
+        <td>{{mark3.A26}}</td>
+        <td>{{mark3.TO6}}</td>
+        <td>{{mark3.E6}}</td>
+ </tr>
+ <th scope="row">7</th>
+<td>{{mark3.SC7}}</td>
+        <td>{{mark3.SN7}}</td>
+        <td>{{mark3.T17}}</td>
+        <td>{{mark3.Q17}}</td>
+        <td>{{mark3.A17}}</td>
+        <td>{{mark3.T27}}</td>
+        <td>{{mark3.Q27}}</td>
+        <td>{{mark3.A27}}</td>
+        <td>{{mark3.TO7}}</td>
+        <td>{{mark3.E7}}</td>
+ </tr>
+
+
+                  </tbody>
+                 </table>
+                  </div>
+
+							<div class="admin-home-logout">
+								<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'updatesem4' user.id%}';">Update Sem4</button>
+							</div><br>
+
+							<label class="text">Semester 5:</label>
+							<div class="table-styl">
+							<table class="table table-striped table-dark table-responsive-lg">
+								<thead>
+								  <tr>
+									<th scope="col">S.No.</th>
+									<th scope="col">Subj.Code</th>
+									<th scope="col">Subj.Name</th>
+									<th scope="col">T1</th>
+									<th scope="col">Q1</th>
+									<th scope="col">A1</th>
+									<th scope="col">T2</th>
+									<th scope="col">Q2</th>
+									<th scope="col">A2</th>
+									<th scope="col">Total</th>
+									<th scope="col">External</th>
+								  </tr>
+								</thead>
+								<tbody>
+								 <tr>
+<th scope="row">1</th>
+<td>{{mark4.SC1}}</td>
+        <td>{{mark4.SN1}}</td>
+        <td>{{mark4.T11}}</td>
+        <td>{{mark4.Q11}}</td>
+        <td>{{mark4.A11}}</td>
+        <td>{{mark4.T21}}</td>
+        <td>{{mark4.Q21}}</td>
+        <td>{{mark4.A21}}</td>
+        <td>{{mark4.TO1}}</td>
+        <td>{{mark4.E1}}</td>
+ </tr>
+ <tr>
+<th scope="row">2</th>
+<td>{{mark4.SC2}}</td>
+        <td>{{mark4.SN2}}</td>
+        <td>{{mark4.T12}}</td>
+        <td>{{mark4.Q12}}</td>
+        <td>{{mark4.A12}}</td>
+        <td>{{mark4.T22}}</td>
+        <td>{{mark4.Q22}}</td>
+        <td>{{mark4.A22}}</td>
+        <td>{{mark4.TO2}}</td>
+        <td>{{mark4.E2}}</td>
+ </tr>
+ <tr>
+<th scope="row">3</th>
+<td>{{mark4.SC3}}</td>
+        <td>{{mark4.SN3}}</td>
+        <td>{{mark4.T13}}</td>
+        <td>{{mark4.Q13}}</td>
+        <td>{{mark4.A13}}</td>
+        <td>{{mark4.T23}}</td>
+        <td>{{mark4.Q23}}</td>
+        <td>{{mark4.A23}}</td>
+        <td>{{mark4.TO3}}</td>
+        <td>{{mark4.E3}}</td>
+ </tr>
+ <th scope="row">4</th>
+<td>{{mark4.SC4}}</td>
+        <td>{{mark4.SN4}}</td>
+        <td>{{mark4.T14}}</td>
+        <td>{{mark4.Q14}}</td>
+        <td>{{mark4.A14}}</td>
+        <td>{{mark4.T24}}</td>
+        <td>{{mark4.Q24}}</td>
+        <td>{{mark4.A24}}</td>
+        <td>{{mark4.TO4}}</td>
+        <td>{{mark4.E4}}</td>
+ </tr>
+ <th scope="row">5</th>
+<td>{{mark4.SC5}}</td>
+        <td>{{mark4.SN5}}</td>
+        <td>{{mark4.T15}}</td>
+        <td>{{mark4.Q15}}</td>
+        <td>{{mark4.A15}}</td>
+        <td>{{mark4.T25}}</td>
+        <td>{{mark4.Q25}}</td>
+        <td>{{mark4.A25}}</td>
+        <td>{{mark4.TO5}}</td>
+        <td>{{mark4.E5}}</td>
+ </tr>
+ <th scope="row">6</th>
+<td>{{mark4.SC6}}</td>
+        <td>{{mark4.SN6}}</td>
+        <td>{{mark4.T16}}</td>
+        <td>{{mark4.Q16}}</td>
+        <td>{{mark4.A16}}</td>
+        <td>{{mark4.T26}}</td>
+        <td>{{mark4.Q26}}</td>
+        <td>{{mark4.A26}}</td>
+        <td>{{mark4.TO6}}</td>
+        <td>{{mark4.E6}}</td>
+ </tr>
+ <th scope="row">7</th>
+<td>{{mark4.SC7}}</td>
+        <td>{{mark4.SN7}}</td>
+        <td>{{mark4.T17}}</td>
+        <td>{{mark4.Q17}}</td>
+        <td>{{mark4.A17}}</td>
+        <td>{{mark4.T27}}</td>
+        <td>{{mark4.Q27}}</td>
+        <td>{{mark4.A27}}</td>
+        <td>{{mark4.TO7}}</td>
+        <td>{{mark4.E7}}</td>
+ </tr>
+
+
+								</tbody>
+							  </table>
+								</div>
+							<div class="admin-home-logout">
+							<button type="button" class="btn btn-outline-info logout-btn" onclick="window.location.href='{%url 'updatesem5' user.id%}';">Update Sem5</button>
+							</div><br>
+
+		<div class="clear"></div>
+		</div>
+</form>
+</div>
+
+<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+
+</html>

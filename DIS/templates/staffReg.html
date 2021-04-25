@@ -1,0 +1,86 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Staff Registration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+				</div>
+			   </section>
+<div class="amcs-form">
+<form action="" method="POST">
+	{%csrf_token%}
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Username</label>
+				<div class="amc-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="username" placeholder="Name" for={{form.username}}
+				</div>
+			</div> 
+			<div class="amc-grid2">
+			<label class="text">Email</label>
+			<div class="amc-div">
+				<i class="fa fa-address-book" aria-hidden="true"></i>
+				<input type="text" name="email" placeholder="Email" for={{form.email}}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="amc-last-grid1">
+			<div class="amc-grid1">
+				<label class="text">Password</label>
+				<div class="amc-div">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					<input type="text" name="password1" placeholder="Password" for={{form.password1}}
+				</div>
+			</div>
+			<div class="amc-grid2">
+			<label class="text">Confirm Password</label>
+			<div class="amc-div">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input type="text" name="password2" placeholder="Confirm Password" for={{form.password2}}
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+		<div class="amcs-submit">
+		<!---728x90--->
+		<input type="submit" value="add a member">
+		</div>
+</form>
+</div>
+
+<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+
+</html>

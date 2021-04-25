@@ -1,0 +1,48 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{%static 'css2/jquery-ui.css'%}"/>
+	<link href="{%static 'css2/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{%static 'css/bootstrap2.css'%}">
+	<!-- CSS only -->
+
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css'%}"><!--font_wesome_icons-->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+
+<section>
+				<div class="header">
+				  <div class="logo">
+					<a href="index.html"><img src="{%static 'images/logo2.png'%}"></a>
+				  </div>
+
+				  <div class="headerCont">
+					<b>DEPARTMENT INFORMATION SYSTEM</b>
+				  </div>
+                    <br><br>
+                    <div class="amcs-form">
+                        <div class="amc-last-grid1">
+							<div class="del-form">
+			            <h2 style="color:white;">Deleting User</h2><br>
+
+                        <p style="color:white;">Are you sure you want to delete "{{item}} ?"</p><br>
+                            <form action="{% url 'deleteuser' item.id %}" method="POST">
+
+				{% csrf_token %}
+				<a class="btn btn-warning" href="{% url 'adminHome' %}">Cancel</a>
+
+				<input class="btn btn-danger" type="submit" name="Confirm">
+                    </div>
+							</div>
+                        </div>
+			   </section>
+
+</body>
+</html>
