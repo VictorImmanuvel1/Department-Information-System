@@ -76,7 +76,7 @@ h1 {
 }
 .amcs-form {
 	padding: 8em 1em 2em 2em;
-    width: 720px;
+    width: 1080px;
 	background: rgba(4, 4, 4, 0.55);
     margin: 0 auto;
 	box-shadow: 3px 3px #1e8dffb8;
@@ -97,6 +97,12 @@ label.text {
     padding: 10px 0;
     color:#FFFFFF;
 	font-family: 'PT Sans Caption', sans-serif;
+}
+.ta-column-1{
+width:10%;
+}
+.table-column-4{
+width:15%;
 }
 label.amc-set {
     font-size: 15px;
